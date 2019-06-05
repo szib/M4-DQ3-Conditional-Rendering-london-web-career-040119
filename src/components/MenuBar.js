@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from './Link'
+
 
 const MenuBar = (props) => {
 
@@ -15,21 +17,10 @@ const MenuBar = (props) => {
 
   return (
     <div className="ui four item menu">
-      <a className="item active" id="profile">
-        <i className="user large icon" id="profile"/>
-      </a>
-
-      <a className="item" id="photo">
-        <i className="photo large icon" id="photo"/>
-      </a>
-
-      <a className="item" id="cocktail">
-        <i className="cocktail large icon" id="cocktail"/>
-      </a>
-
-      <a className="item" id="pokemon"> 
-        <i className=" themeisle large icon" id="pokemon"/>
-      </a>
+      <Link {...props} icon="user" name="profile"></Link>
+      <Link {...props} icon="photo" name="photo"></Link>
+      <Link {...props} icon="cocktail" name="cocktail"></Link>
+      <Link {...props} icon="themeisle" name="pokemon"></Link>
     </div>
   )
 
